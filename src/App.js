@@ -97,11 +97,11 @@ function Sign(){
 // nave , body,
 function Wellcome(){
   return (
-   <div>
-     <div>
-        <h1>Together We Lift.</h1>
-        <p>
-          <span>Welcome to Gym-app</span>  your digital space for strength, 
+   <div className='px-40 py-20 pb-10 flex '>
+     <div className='w-1/2 items-center'>
+        <h1 className='text-5xl py-10'>Together We Lift.</h1>
+        <p className='pb-10'>
+          Welcome to <span className='text-xl text-[#dd2d4a]'>  Gym-app</span>   your digital space for strength, 
           wellness, and transformation. Whether you're starting your 
           fitness journey or leveling up your routine, Gym-app is designed 
           to empower you every step of the way. Discover workouts, connect 
@@ -110,13 +110,20 @@ function Wellcome(){
           Your goals are within 
           reach—and it all starts here.
           </p>
+          <div>
+            <a href='' className='bg-[#dd2d4a] px-6 py-1 hover:bg-[#e0405a] rounded-xl'>
+                Start
+            </a>
+          </div>
+          
     </div>
-    <div>
-      <img/>
+    <div className=''>
+        <img src="/image.png" alt="Gym Interior" className="" />
     </div>
    </div>
   )
 } 
+
 
 function Servies (){
   return (
