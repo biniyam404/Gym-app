@@ -4,50 +4,90 @@ function App() {
   return (
     <div className="App">
       <Navigatin/>
-    </div>
-  );
-}
-function Navigatin (){
-  return (
-    <div>
-      <Logo/>
-      <NaveParts/>
-      <Sign/>
       <Wellcome/>
       <Servies/>
       <Feedback/>
       <About/>
       <Footer/>
     </div>
+  );
+}
+function Navigatin (){
+  return (
+    <div className='py-5  px-10 flex justify-between items-center'>
+      <Logo/>
+      <NaveParts/>
+      <Sign/>
+    </div>
   )
 }
 function Logo (){
   return (
-    <div>
+    <div className='pl-10 text-3xl'>
       Logo
     </div>
   )
 }
 function NaveParts (){
   return (
-    <div>
-     <a>About</a>
-     <a>Personal Trainer</a>
-     <a>My Schedules</a>
-     <a>Packages</a>
-     <a>Contacts</a>
+    <div className='space-x-6'>
+     <a href='' className='relative group'>
+      About
+      {/* underlining using span */}
+              <span className='absolute left-0 
+              bottom-0 w-0 h-[1.5px] bg-[#dd2d4a]
+              transition-all duration-300 
+              group-hover:w-full'></span>
+     </a>
+     <a href=''  className='relative group'>
+      Personal Trainer
+      {/* underlining using span */}
+              <span className='absolute left-0 
+              bottom-0 w-0 h-[1.5px] bg-[#dd2d4a]
+              transition-all duration-300 
+              group-hover:w-full'></span>
+      </a>
+     <a href=''  className='relative group'>
+      My Schedules
+      {/* underlining using span */}
+              <span className='absolute left-0 
+              bottom-0 w-0 h-[1.5px] bg-[#dd2d4a]
+              transition-all duration-300 
+              group-hover:w-full'></span>
+      </a>
+     <a href=''  className='relative group'>
+      Packages
+      {/* underlining using span */}
+              <span className='absolute left-0 
+              bottom-0 w-0 h-[1.5px] bg-[#dd2d4a]
+              transition-all duration-300 
+              group-hover:w-full'></span>
+      </a>
+     <a href=''  className='relative group'>
+      Contacts
+      {/* underlining using span */}
+              <span className='absolute left-0 
+              bottom-0 w-0 h-[1.5px] bg-[#dd2d4a]
+              transition-all duration-300 
+              group-hover:w-full'></span>
+      </a>
     </div>
   )
 }
 function Sign(){
   return(
-    <div>
-      <button>
+    <div className='space-x-6'>
+      <a href='' className='bg-[#dd2d4a] px-6 py-1 hover:bg-[#e0405a] rounded-xl'>
                 Sign In
-      </button>
+      </a>
 
-      <button>
+      <button className='relative group'>
               Log In
+              {/* underlining using span */}
+              <span className='absolute left-0 
+              bottom-0 w-0 h-[1.5px] bg-[#dd2d4a]
+              transition-all duration-300 
+              group-hover:w-full'></span>
 
       </button>
     </div>
