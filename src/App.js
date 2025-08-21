@@ -1,4 +1,36 @@
 import './output.css';
+const gymFeatures = [
+  {
+    title: "Personal Trainers",
+    description:
+      "Get matched with certified trainers who understand your goals, fitness level, and preferred workout style. Whether you're into strength training, cardio, or flexibility, our trainers are here to guide, motivate, and track your progress."
+  },
+  {
+    title: "Flexible Packages",
+    description:
+      "Choose from curated bundles like Gym + Bath, or build your own with services that fit your lifestyle. Our packages are designed to be affordable, customizable, and scalable—so you only pay for what you need."
+  },
+  {
+    title: "Custom Schedules",
+    description:
+      "Plan your workouts around your life. Use our intuitive scheduling tool to set training times, rest days, and even sync with your trainer’s availability. No more missed sessions—just consistent progress."
+  },
+  {
+    title: "Easy Payment Options",
+    description:
+      "We support secure, hassle-free payments through mobile wallets, cards, and local banking systems. Manage subscriptions, renewals, and upgrades with just a few taps."
+  },
+  {
+    title: "Fully Equipped Gym",
+    description:
+      "Access a wide range of modern machines, full dumbbell sets, and specialized equipment for every workout type. Whether you're a beginner or a pro, our gear is ready to support your grind."
+  },
+  {
+    title: "Age & Gender-Based Plans",
+    description:
+      "Your body is unique—your workout should be too. We offer personalized routines based on age, gender, and fitness level to ensure safety, effectiveness, and long-term results."
+  }
+];
 
 function App() {
   return (
@@ -127,16 +159,19 @@ function Wellcome(){
 
 function Servies (){
   return (
-    <div>
-      <div>What You will Find Here:</div>
-      <Part/>
+    <div className='p-5'>
+      <div className='text-center text-xl text-[]'>What You will Find Here:</div>
+      <div className='grid grid-cols-3 gap-3'>
+        {gymFeatures.map((feature)=><Part gymFeatures = {feature}/>)}
+        </div>
     </div>
   )
 }
-function Part(){
+function Part({gymFeatures}){
   return(
-    <div>
-        Servies parts 
+    <div className='p-5 rounded border'>
+        <div className='text-xl p-3'>{gymFeatures.title}</div>
+        <div>{gymFeatures.description}</div>
     </div>
   )
 }
