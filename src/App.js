@@ -39,7 +39,7 @@ function App() {
       <Wellcome/>
       <Servies/>
       <About/>
-      <Feedback/>
+      <Feedback testimonials={testimonials}/>
       <Footer/>
     </div>
   );
@@ -198,12 +198,64 @@ function About (){
           )
 }
 
-function Feedback(){
+const testimonials = [
+  {
+    Img:"./gymboy.jpg",
+    name: "Kadianguleten",
+    feedback:
+      "I joined this gym four months ago and the services are excellent. I suggest trying the packages—they’re really enjoyable and effective. I’ve seen noticeable changes in my body in such a short time!",
+  },
+  {
+    Img:"./gymboy.jpg",
+    name: "Kadianguleten",
+    feedback:
+      "I joined this gym four months ago and the services are excellent. I suggest trying the packages—they’re really enjoyable and effective. I’ve seen noticeable changes in my body in such a short time!",
+  },
+  {
+    Img:"./gymboy.jpg",
+    name: "Kadianguleten",
+    feedback:
+      "I joined this gym four months ago and the services are excellent. I suggest trying the packages—they’re really enjoyable and effective. I’ve seen noticeable changes in my body in such a short time!",
+  },
+  {
+    Img:"./gymboy.jpg",
+    name: "Kadianguleten",
+    feedback:
+      "I joined this gym four months ago and the services are excellent. I suggest trying the packages—they’re really enjoyable and effective. I’ve seen noticeable changes in my body in such a short time!",
+  },
+];
+
+
+function Feedback({testimonials}){
   return (
-    <div>
-        Peoples Feedback About The Gym
+    <div className='p-20 bg-white text-black h-screen'>
+        <div className='text-center text-xl p-5'>Feedbacks</div>
+        <div className='grid grid-cols-2 gap-5'>
+          {
+          testimonials.map((test)=><PeoplesFeedback test = {test}/>)
+          }
+        </div>
     </div>
   )
+}
+
+function PeoplesFeedback({ test }) {
+  return (
+    <div className='flex gap-5 items-center shadow-sm'>
+      <div className=''>
+            <img
+              src={test.Img}
+              alt={`${test.name}'s feedback`}
+              className="rounded object-cover"
+            />
+      </div>
+      <div>
+        <div className='text-xl font-bold'>{test.name}</div>
+      <p className='font-semibold p-2'>{test.feedback}</p>
+      </div>
+
+    </div>
+  );
 }
 
 
