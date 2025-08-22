@@ -129,7 +129,7 @@ function Sign(){
 // nave , body,
 function Wellcome(){
   return (
-   <div className='px-40 py-20 pb-10 flex '>
+   <div className='px-50 py-10 pb-0 flex bg-[#343a40] '>
      <div className='w-1/2 items-center'>
         <h1 className='text-5xl py-10'>Together We Lift.</h1>
         <p className='pb-10'>
@@ -150,7 +150,7 @@ function Wellcome(){
           
     </div>
     <div className=''>
-        <img src="/image.png" alt="Gym Interior" className="" />
+        <img src="/img.png" alt="Gym Interior" className="" />
     </div>
    </div>
   )
@@ -159,9 +159,15 @@ function Wellcome(){
 
 function Servies (){
   return (
-    <div className='p-5'>
-      <div className='text-center text-xl text-[#dd2d4a] p-5'>What You will Find Here:</div>
-      <div className='grid grid-cols-3 gap-5 '>
+    <div className='p-5 bg-white'>
+      <div className='pt-5 text-center text-2xl text-black relative group '>
+        What You will Find Here
+        <span className='absolute left-0 
+              bottom-0 w-0 h-[1.5px] bg-[#dd2d4a]
+              transition-all duration-300 
+              group-hover:w-full'></span>
+      </div>
+      <div className='grid grid-cols-3 gap-5 p-5 '>
         {gymFeatures.map((feature)=><Part gymFeatures = {feature}/>)}
         </div>
     </div>
@@ -169,9 +175,9 @@ function Servies (){
 }
 function Part({gymFeatures}){
   return(
-    <div className='p-5 rounded  hover:-translate-1 bg-[#dd2d4a]'>
-        <div className='text-xl p-3'>{gymFeatures.title}</div>
-        <div>{gymFeatures.description}</div>
+    <div className='p-5 rounded  hover:-translate-1 bg-[#ff0a54] transition duration-500'>
+        <div className='text-xl text-center py-3 bg-black rounded-3xl shadow-xl '>{gymFeatures.title}</div>
+        <div className='px-2 py-2'>{gymFeatures.description}</div>
     </div>
   )
 }
