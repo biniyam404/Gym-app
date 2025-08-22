@@ -160,8 +160,8 @@ function Wellcome(){
 function Servies (){
   return (
     <div className='p-5'>
-      <div className='text-center text-xl text-[]'>What You will Find Here:</div>
-      <div className='grid grid-cols-3 gap-3'>
+      <div className='text-center text-xl text-[#dd2d4a] p-5'>What You will Find Here:</div>
+      <div className='grid grid-cols-3 gap-5 '>
         {gymFeatures.map((feature)=><Part gymFeatures = {feature}/>)}
         </div>
     </div>
@@ -169,7 +169,7 @@ function Servies (){
 }
 function Part({gymFeatures}){
   return(
-    <div className='p-5 rounded border'>
+    <div className='p-5 rounded  hover:-translate-1 bg-[#dd2d4a]'>
         <div className='text-xl p-3'>{gymFeatures.title}</div>
         <div>{gymFeatures.description}</div>
     </div>
