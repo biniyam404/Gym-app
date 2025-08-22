@@ -38,8 +38,8 @@ function App() {
       <Navigatin/>
       <Wellcome/>
       <Servies/>
-      <Feedback/>
       <About/>
+      <Feedback/>
       <Footer/>
     </div>
   );
@@ -184,8 +184,16 @@ function Part({gymFeatures}){
 
 function About (){
           return(
-            <div>
-              About the gym
+            <div className='p-10 py-25'>
+              <h1 className='text-center text-xl p-5'>About</h1>
+              <div className='flex items-center justify-center gap-5'>
+                <img src='/about.png'  className='pl-25'/>
+                <p className='p-5 w-1/2'>
+                Welcome to Lift Gym — Where Strength Meets Purpose. At Lift Gym, we believe fitness is more than reps and routines—it's a journey of transformation. Whether you're just starting out or pushing past plateaus, our space is built to empower you. With certified personal trainers, flexible workout packages, and custom schedules that fit your lifestyle, we make progress personal. Our fully equipped facility supports every goal—from strength 
+                and cardio to flexibility and recovery. Lift Gym is more than a place to train—it's a community where you grow, lift each other up, and redefine what's possible. Together, we lift.
+              </p>
+              
+              </div>
             </div>
           )
 }
@@ -193,7 +201,7 @@ function About (){
 function Feedback(){
   return (
     <div>
-        peoples feedback about the gym and ratings
+        Peoples Feedback About The Gym
     </div>
   )
 }
